@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة حلبسة الأساسية</title>
+    
+    <!-- تحسين SEO - بيانات الموقع -->
+    <title>حلبسة - الموقع الرسمي | حلبسة الأساسية</title>
+    <meta name="description" content="موقع حلبسة الرسمي - أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل. اكتشف أحدث الميمز والتمبلتات والكثير أكثر.">
+    <meta name="keywords" content="حلبسة, موقع حلبسة, حلبسة الأساسية, 7LBSAA, 7LBSAA1, تمبلتات, ميمز, مدرسين, ثانوية عامة, خلفيات موبايل, محاكي">
+    <meta name="author" content="حلبسة">
+    <meta property="og:title" content="حلبسة - الموقع الرسمي">
+    <meta property="og:description" content="أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/6258e6/ffffff?text=حلبسة+الموقع+الرسمية">
+    <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaa.main/">
+    <meta property="og:type" content="website">
+    
     <style>
         * {
             margin: 0;
@@ -74,6 +85,17 @@
             animation: shimmer 4s linear infinite, float 3s ease-in-out infinite;
             font-weight: bold;
             letter-spacing: 2px;
+        }
+
+        .brand-tagline {
+            font-size: 1.5em;
+            margin: 15px 0 30px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
 
         .contact-btn {
@@ -550,6 +572,10 @@
                 margin-bottom: 15px;
             }
 
+            .brand-tagline {
+                font-size: 1.2em;
+            }
+
             .contact-btn {
                 padding: 12px 30px;
                 font-size: 1.2em;
@@ -630,7 +656,11 @@
 
     <div class="container">
         <header>
-            <h1>🌟 صفحة حلبسة الأساسية 🌟</h1>
+            <h1>🌟 حلبسة الأساسية 🌟</h1>
+            <div class="brand-tagline">
+                أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل<br>
+                <strong>7LBSAA • 7LBSAA1</strong>
+            </div>
             
             <a href="https://7lbsaa1.github.io/7lbsaa.contact-us/" class="contact-btn">تواصل معنا 📞</a>
             
@@ -693,7 +723,7 @@
         </div>
 
         <footer>
-            <p><strong>جميع الحقوق محفوظة © موقع حلبسة</strong></p>
+            <p><strong>جميع الحقوق محفوظة © موقع حلبسة • 7LBSAA • 7LBSAA1</strong></p>
             <a href="https://7lbsaa1.github.io/7lbsaa.contact-us/" class="contact-btn">تواصل معنا 📞</a>
         </footer>
     </div>
@@ -904,6 +934,15 @@
                 card.style.transform = '';
             });
         });
+
+        // تحسين SEO - إضافة بيانات إضافية
+        document.querySelector('title').textContent = 'حلبسة - الموقع الرسمي | حلبسة الأساسية | 7LBSAA';
+        
+        // إضافة بيانات أوثوقية
+        const metaRobots = document.createElement('meta');
+        metaRobots.name = 'robots';
+        metaRobots.content = 'index, follow';
+        document.head.appendChild(metaRobots);
 
         console.log('🎨 موقع حلبسة تم تحميله بنجاح! ✨');
     </script>
