@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- تحسين SEO - بيانات الموقع -->
-    <title>حلبسة - الموقع الرسمي | حلبسة الأساسية</title>
-    <meta name="description" content="موقع حلبسة الرسمي - أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل. اكتشف أحدث الميمز والتمبلتات والكثير أكثر.">
-    <meta name="keywords" content="حلبسة, موقع حلبسة, حلبسة الأساسية, 7LBSAA, 7LBSAA1, تمبلتات, ميمز, مدرسين, ثانوية عامة, خلفيات موبايل, محاكي">
-    <meta name="author" content="حلبسة">
-    <meta property="og:title" content="حلبسة - الموقع الرسمي">
-    <meta property="og:description" content="أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/6258e6/ffffff?text=حلبسة+الموقع+الرسمية">
-    <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaa.main/">
-    <meta property="og:type" content="website">
+    <!-- ==========================================
+         تحسينات SEO (عشان تطلع في بحث جوجل)
+         ========================================== -->
+    <!-- العنوان: أهم حاجة عشان تطلع لما حد يكتب "صفحة حلبسة" -->
+    <title>حلبسة - الصفحة الرسمية | موقع حلبسة (7LBSAA)</title>
+    
+    <!-- الوصف: الكلام اللي بيظهر تحت العنوان في جوجل -->
+    <meta name="description" content="صفحة حلبسة الرسمية - أكبر منصة عربية للتمبلتات والميمز، ومدرسين الثانوية العامة، وخلفيات الموبايل. (7LBSAA) هو موقعك الأول للترفيه والتعليم.">
+    
+    <!-- الكلمات المفتاحية: كلمات الناس بتبحث بيها -->
+    <meta name="keywords" content="صفحة حلبسة, موقع حلبسة, حلبسة, 7lbsaa, 7LBSAA, حلبسة الأساسية, تمبلتات, ميمز, مدرسين ثانوية عامة, خلفيات">
+    
+    <!-- المؤلف -->
+    <meta name="author" content="حلبسة - 7LBSAA">
 
-    <!-- كود إثبات ملكية جوجل الخاص بك -->
+    <!-- الرابط الأصلي للموقع (مهم جداً عشان جوجل ميتلخبطش) -->
+    <link rel="canonical" href="https://7lbsaa1.github.io/7lbsaa/" />
+
+    <!-- إعدادات المشاركة على فيسبوك وواتساب (Open Graph) -->
+    <meta property="og:title" content="حلبسة - الصفحة الرسمية">
+    <meta property="og:description" content="أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/6258e6/ffffff?text=7LBSAA+Official">
+    <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaa/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="حلبسة">
+
+    <!-- كود إثبات ملكية جوجل -->
     <meta name="google-site-verification" content="VtG7Ro7J-T9g1SR1m9kVf5uRQ-Y2hhUU6AHlDqdSjHI" />
     
     <style>
-        /* ... نفس كود الـ CSS الطويل بدون تغيير ... */
+        /* ==========================================
+           تصميم الموقع (CSS)
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
@@ -63,14 +80,8 @@
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         header h1 {
@@ -134,21 +145,15 @@
         }
 
         @keyframes shimmer {
-            to {
-                background-position: 300% center;
-            }
+            to { background-position: 300% center; }
         }
 
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
-        /* شريط البحث المحسّن */
+        /* شريط البحث */
         .search-container {
             position: relative;
             margin: 30px auto;
@@ -202,10 +207,6 @@
             box-shadow: 0 15px 50px rgba(255, 255, 255, 0.3),
                         inset 0 0 30px rgba(255, 255, 255, 0.4);
             border-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .search-icon:active {
-            transform: scale(0.95);
         }
 
         .search-icon svg {
@@ -274,9 +275,7 @@
             cursor: text;
         }
 
-        .search-input::placeholder {
-            color: #999;
-        }
+        .search-input::placeholder { color: #999; }
 
         .search-button {
             position: absolute;
@@ -301,11 +300,7 @@
             box-shadow: 0 8px 30px rgba(102, 126, 234, 0.7);
         }
 
-        .search-button svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
+        .search-button svg { width: 24px; height: 24px; fill: white; }
 
         .search-results {
             margin-top: 20px;
@@ -326,14 +321,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .search-results p {
-            color: #333;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        /* تصميم الكروت المحسن للاستجابة */
+        /* الكروت (Cards) */
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -341,28 +329,16 @@
             margin-bottom: 60px;
         }
 
-        /* للشاشات الصغيرة جداً */
         @media (max-width: 480px) {
-            .cards-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+            .cards-container { grid-template-columns: 1fr; gap: 30px; }
         }
 
-        /* للشاشات المتوسطة */
         @media (min-width: 768px) and (max-width: 1024px) {
-            .cards-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 35px;
-            }
+            .cards-container { grid-template-columns: repeat(2, 1fr); gap: 35px; }
         }
 
-        /* للشاشات الكبيرة */
         @media (min-width: 1025px) {
-            .cards-container {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 40px;
-            }
+            .cards-container { grid-template-columns: repeat(3, 1fr); gap: 40px; }
         }
 
         .card {
@@ -377,29 +353,19 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(45deg, transparent, rgba(255,255,255,0.5), transparent);
             transform: translateX(-100%);
             transition: transform 0.6s;
         }
 
-        .card:hover::before {
-            transform: translateX(100%);
-        }
-
-        .card.hidden {
-            display: none;
-        }
+        .card:hover::before { transform: translateX(100%); }
+        .card.hidden { display: none; }
 
         .card:hover {
             transform: translateY(-15px) scale(1.03);
@@ -411,12 +377,9 @@
             height: 250px;
             object-fit: cover;
             transition: transform 0.6s ease;
-            flex-shrink: 0;
         }
 
-        .card:hover .card-image {
-            transform: scale(1.15) rotate(2deg);
-        }
+        .card:hover .card-image { transform: scale(1.15) rotate(2deg); }
 
         .card-content {
             padding: 30px 25px;
@@ -463,24 +426,6 @@
             margin-top: auto;
         }
 
-        .card-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .card-button:hover::before {
-            width: 400px;
-            height: 400px;
-        }
-
         .card-button:hover {
             transform: scale(1.08) translateY(-3px);
             box-shadow: 0 12px 35px rgba(102, 126, 234, 0.7);
@@ -512,41 +457,21 @@
             display: none;
             text-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
+        .no-results.show { display: block; animation: fadeIn 0.5s ease; }
 
-        .no-results.show {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
         .star {
             position: fixed;
-            width: 3px;
-            height: 3px;
+            width: 3px; height: 3px;
             background: white;
             border-radius: 50%;
             box-shadow: 0 0 10px white;
             animation: fall linear forwards;
             z-index: 0;
         }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
+        @keyframes fall { to { transform: translateY(100vh); opacity: 0; } }
 
         .ripple {
             position: absolute;
@@ -556,102 +481,27 @@
             animation: ripple-animation 0.6s ease-out;
             pointer-events: none;
         }
+        @keyframes ripple-animation { to { transform: scale(4); opacity: 0; } }
 
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* تحسينات الاستجابة للهواتف */
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
-                font-size: 16px;
-            }
-
-            header h1 {
-                font-size: 2.8em;
-                margin-bottom: 15px;
-            }
-
-            .brand-tagline {
-                font-size: 1.2em;
-            }
-
-            .contact-btn {
-                padding: 12px 30px;
-                font-size: 1.2em;
-            }
-
-            .search-icon {
-                width: 70px;
-                height: 70px;
-            }
-
-            .search-icon svg {
-                width: 35px;
-                height: 35px;
-            }
-
-            .search-container {
-                max-width: 100%;
-                margin: 20px auto;
-            }
-
-            .search-input {
-                font-size: 1.1em;
-                padding: 15px 60px 15px 25px;
-            }
-
-            .cards-container {
-                gap: 25px;
-            }
-
-            .card-content {
-                padding: 25px 20px;
-            }
-
-            .card-content h2 {
-                font-size: 1.6em;
-            }
-
-            .card-content p {
-                font-size: 0.95em;
-            }
-
-            .card-button {
-                padding: 12px 25px;
-                font-size: 1em;
-            }
+            body { padding: 15px; font-size: 16px; }
+            header h1 { font-size: 2.8em; margin-bottom: 15px; }
+            .brand-tagline { font-size: 1.2em; }
+            .contact-btn { padding: 12px 30px; font-size: 1.2em; }
+            .search-icon { width: 70px; height: 70px; }
+            .search-icon svg { width: 35px; height: 35px; }
+            .search-container { max-width: 100%; margin: 20px auto; }
+            .search-input { font-size: 1.1em; padding: 15px 60px 15px 25px; }
+            .cards-container { gap: 25px; }
+            .card-content { padding: 25px 20px; }
+            .card-content h2 { font-size: 1.6em; }
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 2.2em;
-                letter-spacing: 1px;
-            }
-
-            .contact-btn {
-                padding: 10px 25px;
-                font-size: 1.1em;
-            }
-
-            .search-input {
-                font-size: 1em;
-                padding: 15px 60px 15px 25px;
-            }
-
-            .search-button {
-                width: 45px;
-                height: 45px;
-            }
-
-            .search-button svg {
-                width: 20px;
-                height: 20px;
-            }
+            header h1 { font-size: 2.2em; }
+            .contact-btn { padding: 10px 25px; font-size: 1.1em; }
+            .search-input { font-size: 1em; }
+            .search-button { width: 45px; height: 45px; }
         }
     </style>
 </head>
@@ -659,9 +509,8 @@
     <canvas id="particles-canvas"></canvas>
 
     <div class="container">
-        <!-- ... باقي محتوى الصفحة (Header, Cards, Footer) بدون تغيير ... -->
         <header>
-            <h1>🌟 حلبسة الأساسية 🌟</h1>
+            <h1>🌟 صفحة حلبسة الرسمية 🌟</h1>
             <div class="brand-tagline">
                 أكبر منصة عربية لمشاركة التمبلتات والميمز والمدرسين وخلفيات الموبايل<br>
                 <strong>7LBSAA • 7LBSAA1</strong>
@@ -681,7 +530,7 @@
 
                 <div class="search-box" id="searchBox">
                     <div class="search-input-container">
-                        <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن التمبلتات أو المدرسين أو الخلفيات...">
+                        <input type="text" class="search-input" id="searchInput" placeholder="ابحث في موقع حلبسة...">
                         <button class="search-button" id="searchButton">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -695,52 +544,57 @@
 
         <div class="no-results" id="noResults">
             <p>🔍 لم يتم العثور على نتائج</p>
-            <p style="font-size: 0.8em;">جرب البحث عن "تمبلتات" أو "مدرسين" أو "خلفيات"</p>
+            <p style="font-size: 0.8em;">جرب كلمات تانية زي "تمبلتات" أو "مدرسين"</p>
         </div>
 
         <div class="cards-container">
+            <!-- كارد التمبلتات -->
             <div class="card" data-category="تمبلتات ميمز تمبلت ميم صور مضحكة كوميدية نكت فكاهة ساخر">
-                <img src="https://scontent.fcai19-4.fna.fbcdn.net/v/t1.15752-9/578718717_1542292106967401_2827635564588688765_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4scib9nRhucQ7kNvwGDqWkq&_nc_oc=AdkZLG30fPm7hnQ4QmmvojCwlZP5aX-a8Dr09jYFBWvtoYpIxFJjtuaG7zBwVF3nqWE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-4.fna&oh=03_Q7cD3wGvgLeiKYdsq-0NRzFzo5N7QisdCwmEjJnY41nAbXJ4zw&oe=693995AE" alt="تمبلتات وميمز" class="card-image">
+                <img src="https://scontent.fcai19-4.fna.fbcdn.net/v/t1.15752-9/578718717_1542292106967401_2827635564588688765_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4scib9nRhucQ7kNvwGDqWkq&_nc_oc=AdkZLG30fPm7hnQ4QmmvojCwlZP5aX-a8Dr09jYFBWvtoYpIxFJjtuaG7zBwVF3nqWE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-4.fna&oh=03_Q7cD3wGvgLeiKYdsq-0NRzFzo5N7QisdCwmEjJnY41nAbXJ4zw&oe=693995AE" alt="تمبلتات وميمز حلبسة" class="card-image">
                 <div class="card-content">
                     <h2> التمبلتات والميمز</h2>
-                    <p>مجموعة مضحكة ومميزة من التمبلتات والميمز المصرية الكوميدية. استمتع بأحدث الميمز والصور المضحكة التي تعبر عن الحياة اليومية بطريقة كوميدية ومسلية!</p>
+                    <p>مجموعة مضحكة ومميزة من التمبلتات والميمز المصرية الكوميدية.</p>
                     <a href="https://7lbsaa1.github.io/7lbsaa.memes/" class="card-button"> موقع التمبلتات 😂 </a>
                 </div>
             </div>
 
+            <!-- كارد المدرسين -->
             <div class="card" data-category="مدرسين الثانوية العامة تعليمية دراسية مدرسين مدرسة دروس منهج امتحانات">
-                <img src="https://scontent.fcai19-4.fna.fbcdn.net/v/t1.15752-9/584387455_1219327836360318_1570719632595742221_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=eUSuBE2Xy9AQ7kNvwGXz3r8&_nc_oc=AdnIJuREQGvSqahHBHKy0woNLNFjRk2uCM8U0WZNHMfLD_RLO7MnrQ2m9vQfsvPN30Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-4.fna&oh=03_Q7cD3wHyc-WARQkcM_tM1o2X3E6ywy9dWR51biCc7Yk4ig3EOg&oe=69437577" alt="مدرسين الثانوية العامة" class="card-image">
+                <img src="https://scontent.fcai19-4.fna.fbcdn.net/v/t1.15752-9/584387455_1219327836360318_1570719632595742221_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=eUSuBE2Xy9AQ7kNvwGXz3r8&_nc_oc=AdnIJuREQGvSqahHBHKy0woNLNFjRk2uCM8U0WZNHMfLD_RLO7MnrQ2m9vQfsvPN30Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-4.fna&oh=03_Q7cD3wHyc-WARQkcM_tM1o2X3E6ywy9dWR51biCc7Yk4ig3EOg&oe=69437577" alt="مدرسين الثانوية العامة حلبسة" class="card-image">
                 <div class="card-content">
                     <h2>👨‍🏫 مدرسين الثانوية العامة</h2>
-                    <p>مجموعة شاملة من أفضل مدرسين الثانوية العامة مع شرح مبسط للمنهج وأسئلة امتحانات سابقة. احصل على أفضل الشروحات والنصائح للنجاح في امتحانات الثانوية العامة.</p>
+                    <p>دليلك الشامل لأفضل مدرسين الثانوية العامة مع شرح مبسط للمنهج.</p>
                     <a href="https://7lbsaa1.github.io/7lbsaateachers/" class="card-button">موقع المدرسين 🎓</a>
                 </div>
             </div>
 
+            <!-- كارد الخلفيات -->
             <div class="card" data-category="خلفيات موبايل محاكي صور خلفية wallpapers">
-                <img src="https://scontent.fcai19-11.fna.fbcdn.net/v/t1.15752-9/528035703_4185978934968651_614432039096875556_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=r9AxYlFbtEgQ7kNvwGdDIVP&_nc_oc=Adk-GcZ5WYaNFonrYV6kEN78UnRso1FR-n0bAG5VEQdWxPnzumrqJuL-BpbtYpX4bS4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-11.fna&oh=03_Q7cD3wGc_WkjwDRWVPVT4K0QtN00EnV3ZeviVHVCFNU_Pd2lYg&oe=693CC149" alt="خلفيات للموبايل والمحاكي" class="card-image">
+                <img src="https://scontent.fcai19-11.fna.fbcdn.net/v/t1.15752-9/528035703_4185978934968651_614432039096875556_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=r9AxYlFbtEgQ7kNvwGdDIVP&_nc_oc=Adk-GcZ5WYaNFonrYV6kEN78UnRso1FR-n0bAG5VEQdWxPnzumrqJuL-BpbtYpX4bS4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-11.fna&oh=03_Q7cD3wGc_WkjwDRWVPVT4K0QtN00EnV3ZeviVHVCFNU_Pd2lYg&oe=693CC149" alt="خلفيات حلبسة" class="card-image">
                 <div class="card-content">
                     <h2>خلفيات للموبايل والمحاكي</h2>
-                    <p>مجموعة رائعة من الخلفيات المميزة للموبايل والمحاكي. اختر الخلفية المناسبة لجهازك واستمتع بتصميمات جذابة وفريدة!</p>
+                    <p>مجموعة رائعة من الخلفيات المميزة للموبايل والمحاكي.</p>
                     <a href="https://7lbsaa1.github.io/7lbsaa.wallpapers/" class="card-button">زيارة الموقع 📱</a>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p><strong>جميع الحقوق محفوظة © موقع حلبسة • 7LBSAA • 7LBSAA1</strong></p>
+            <p><strong>جميع الحقوق محفوظة © صفحة حلبسة الرسمية • 7LBSAA</strong></p>
             <a href="https://7lbsaa1.github.io/7lbsaa.contact-us/" class="contact-btn">تواصل معنا 📞</a>
         </footer>
     </div>
     
     <script>
-        // ... نفس كود الـ JavaScript الطويل بدون تغيير ...
-        // ====== جزيئات متحركة ======
+        // ==========================================
+        // كود الجافاسكريبت (التفاعلات)
+        // ==========================================
+        
+        // 1. جزيئات متحركة في الخلفية
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
         const particles = [];
         const particleCount = 100;
 
@@ -753,15 +607,12 @@
                 this.speedY = (Math.random() - 0.5) * 0.6;
                 this.opacity = Math.random() * 0.5 + 0.4;
             }
-
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-
                 if (this.x > canvas.width || this.x < 5) this.speedX *= -1;
                 if (this.y > canvas.height || this.y < 5) this.speedY *= -1;
             }
-
             draw() {
                 ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
                 ctx.beginPath();
@@ -771,25 +622,17 @@
         }
 
         function initParticles() {
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
+            for (let i = 0; i < particleCount; i++) particles.push(new Particle());
         }
 
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-
+            particles.forEach(particle => { particle.update(); particle.draw(); });
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-
                     if (distance < 100) {
                         ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance / 100)})`;
                         ctx.lineWidth = 1;
@@ -800,19 +643,14 @@
                     }
                 }
             }
-
             requestAnimationFrame(animateParticles);
         }
 
         initParticles();
         animateParticles();
+        window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
 
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // ====== نظام البحث المحسن ======
+        // 2. نظام البحث
         const searchIcon = document.getElementById('searchIcon');
         const searchBox = document.getElementById('searchBox');
         const searchInput = document.getElementById('searchInput');
@@ -823,9 +661,7 @@
 
         searchIcon.addEventListener('click', () => {
             searchBox.classList.toggle('active');
-            if (searchBox.classList.contains('active')) {
-                setTimeout(() => searchInput.focus(), 600);
-            }
+            if (searchBox.classList.contains('active')) setTimeout(() => searchInput.focus(), 600);
         });
 
         function performSearch() {
@@ -835,10 +671,7 @@
             noResults.classList.remove('show');
 
             if (searchTerm === '') {
-                cards.forEach(card => {
-                    card.classList.remove('hidden');
-                    card.style.display = 'flex';
-                });
+                cards.forEach(card => { card.classList.remove('hidden'); card.style.display = 'flex'; });
                 return;
             }
 
@@ -847,7 +680,6 @@
 
             cards.forEach(card => {
                 const category = card.getAttribute('data-category').toLowerCase();
-                
                 if (category.includes(searchTerm)) {
                     card.classList.remove('hidden');
                     card.style.display = 'flex';
@@ -860,88 +692,63 @@
             });
 
             if (foundResults) {
-                let resultText = '';
-                if (searchTerm.includes('تمبلتات') || searchTerm.includes('ميمز') || searchTerm.includes('ميم') || searchTerm.includes('صور') || searchTerm.includes('مضحكة') || searchTerm.includes('كوميدية') || searchTerm.includes('نكت') || searchTerm.includes('فكاهة') || searchTerm.includes('ساخر')) {
-                    resultText = '😂 تم العثور على: موقع التمبلتات والميمز';
-                } else if (searchTerm.includes('مدرسين') || searchTerm.includes('ثانوية') || searchTerm.includes('تعليمية') || searchTerm.includes('دراسية') || searchTerm.includes('مدرسة') || searchTerm.includes('دروس') || searchTerm.includes('منهج') || searchTerm.includes('امتحانات')) {
-                    resultText = '🎓 تم العثور على: موقع مدرسين الثانوية العامة';
-                } else if (searchTerm.includes('خلفيات') || searchTerm.includes('موبايل') || searchTerm.includes('محاكي') || searchTerm.includes('صور') || searchTerm.includes('خلفية') || searchTerm.includes('wallpapers')) {
-                    resultText = '📱 تم العثور على: خلفيات للموبايل والمحاكي';
-                }
+                let resultText = '✨ تم العثور على نتائج';
+                if (searchTerm.includes('تمبلت')) resultText = '😂 قسم التمبلتات والميمز';
+                else if (searchTerm.includes('مدرس')) resultText = '🎓 قسم المدرسين';
+                else if (searchTerm.includes('خلفي')) resultText = '📱 قسم الخلفيات';
                 
-                if (resultText) {
-                    searchResults.innerHTML = `<p style="color: #667eea; font-weight: bold; font-size: 1.2em;">${resultText}</p>`;
-                    searchResults.classList.add('show');
-                }
-
-                setTimeout(() => {
-                    if (foundCards.length > 0) {
-                        foundCards[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-                }, 300);
+                searchResults.innerHTML = `<p style="color: #667eea; font-weight: bold;">${resultText}</p>`;
+                searchResults.classList.add('show');
+                setTimeout(() => { if (foundCards.length > 0) foundCards[0].scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 300);
             } else {
                 noResults.classList.add('show');
-                searchResults.innerHTML = '<p style="color: #ff6b6b; font-weight: bold;">⚠️ لم يتم العثور على نتائج. حاول البحث عن "تمبلتات" أو "مدرسين" أو "خلفيات"</p>';
+                searchResults.innerHTML = '<p style="color: #ff6b6b;">لم يتم العثور على نتائج</p>';
                 searchResults.classList.add('show');
             }
         }
 
         searchButton.addEventListener('click', performSearch);
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
+        searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') performSearch(); });
         searchInput.addEventListener('input', performSearch);
 
-        // ====== تأثيرات إضافية ======
-        const buttons = document.querySelectorAll('.card-button');
-        buttons.forEach(button => {
+        // 3. تأثيرات الأزرار والنجوم
+        document.querySelectorAll('.card-button').forEach(button => {
             button.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 ripple.classList.add('ripple');
-                
                 const rect = this.getBoundingClientRect();
                 const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
                 ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
                 this.appendChild(ripple);
                 setTimeout(() => ripple.remove(), 600);
             });
         });
 
-        function createStar() {
+        setInterval(() => {
             const star = document.createElement('div');
             star.classList.add('star');
             star.style.left = Math.random() * 100 + '%';
-            star.style.animationDuration = Math.random() * 3 + 2 + 's';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
             document.body.appendChild(star);
             setTimeout(() => star.remove(), 5000);
-        }
+        }, 500);
 
-        setInterval(createStar, 500);
-
+        // 4. تأثير حركة الكروت 3D
         cards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
+                const rotateX = ((y - rect.height / 2) / 20);
+                const rotateY = ((rect.width / 2 - x) / 20);
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.03)`;
             });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
+            card.addEventListener('mouseleave', () => { card.style.transform = ''; });
         });
 
-        console.log('🎨 موقع حلبسة تم تحميله بنجاح! ✨');
+        console.log('✅ صفحة حلبسة جاهزة للعمل!');
     </script>
 </body>
 </html>
