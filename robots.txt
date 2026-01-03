@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# رابط خريطة الموقع
+Sitemap: https://7lbsaa1.github.io/7lbsaa/sitemap.xml
