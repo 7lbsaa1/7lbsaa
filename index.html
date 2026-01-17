@@ -1,239 +1,342 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>موقع حلبسة | المنصة الرسمية لـ 7LBSAA</title>
-    <meta name="description" content="موقع حلبسة: أكبر مكتبة تمبلتات ميمز مصرية حصرية بجودة عالية ودليلك الشامل لأفضل مدرسي الثانوية العامة وخلفيات الموبايل.">
-    
-    <link rel="icon" href="logo.png" type="image/png" sizes="96x96">
-    <link rel="apple-touch-icon" href="logo.png">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaa/">
-    <meta property="og:title" content="موقع حلبسة | المنصة الرسمية لـ 7LBSAA">
-    <meta property="og:description" content="تمبلتات ميمز، مدرسين ثانوية عامة، وخلفيات حصرية في مكان واحد.">
-    <meta property="og:image" content="logoshare.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>موقع حلبسة | المنصة الرسمية لـ 7LBSAA</title>
+  <meta name="description" content="موقع حلبسة: تمبلتات وميمز، مدرسين ثانوية عامة، وتحدي معلومات كرة القدم." />
 
-    <style>
-        :root {
-            --primary-bg: linear-gradient(135deg, #6258e6 0%, #1c34bb 100%);
-            --card-bg: #fff5e6;
-            --text-color: #333;
-            --footer-bg: rgba(255, 255, 255, 0.9);
-            --header-text: #fff;
-            --accent-color: #6258e6;
-        }
-        body.dark-mode {
-            --primary-bg: linear-gradient(135deg, #1a1a2e 0%, #0f0f1b 100%);
-            --card-bg: #1e1e2d;
-            --text-color: #e0e0e0;
-            --footer-bg: rgba(30, 30, 45, 0.95);
-            --header-text: #ffd700;
-            --accent-color: #ffd700;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s ease, color 0.3s ease; }
-        body { 
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-             background: var(--primary-bg); 
-             min-height: 100vh; 
-             padding: 15px; 
-             overflow-x: hidden; 
-             position: relative; 
-             color: var(--text-color);
-        }
-        #particles-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
-        .container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-        .theme-toggle {
-            position: fixed; top: 20px; left: 20px; z-index: 100;
-            background: rgba(255,255,255,0.2); border: 2px solid white;
-            padding: 10px; border-radius: 50%; cursor: pointer; width: 45px; height: 45px;
-            display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px);
-            font-size: 1.2rem;
-        }
-        header { text-align: center; color: white; padding: 20px 0; margin-bottom: 20px; }
-        header h1 { 
-             font-size: 2.5em;
-             margin-bottom: 15px; 
-             background: linear-gradient(45deg, #fff, #ffd700, #fff, #ffd700);
-             background-size: 300% auto;
-             -webkit-background-clip: text; background-clip: text;
-             -webkit-text-fill-color: transparent;
-             animation: shimmer 4s linear infinite;
-        }
-        .brand-tagline { color: rgba(255,255,255,0.9); margin-bottom: 25px; line-height: 1.6; }
-        .contact-btn { 
-             display: inline-block; padding: 12px 35px; 
-             background: #e63946; color: white; text-decoration: none; 
-             border-radius: 50px; font-weight: bold; border: 2px solid white;
-             box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
-             animation: pulse-btn 2s infinite;
-        }
-        @keyframes pulse-btn {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .search-container { margin: 30px auto; max-width: 600px; padding: 0 10px; }
-        .search-input-container { 
-             background: white; border-radius: 50px; padding: 5px; 
-             display: flex; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        .search-input { 
-             flex: 1; border: none; outline: none; padding: 12px 25px; 
-             font-size: 1.1em; border-radius: 50px; width: 100%;
-        }
-        .cards-container { 
-             display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 50px; 
-        }
-        .card { 
-             background: var(--card-bg); border-radius: 25px; overflow: hidden; 
-             border: 1px solid rgba(255, 255, 255, 0.1); 
-             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: 0.3s transform ease;
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card-image { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 25px; text-align: center; }
-        .card-content h2 { color: var(--accent-color); margin-bottom: 12px; font-size: 1.6em; }
-        body.dark-mode .card-content p { color: #bbb; }
-        .card-button { 
-             display: inline-block; padding: 12px 35px; 
-             background: #1216f3; color: white; text-decoration: none; 
-             border-radius: 50px; font-weight: bold; margin-top: 15px;
-            transition: 0.3s;
-        }
-        .card-button:hover { background: #0004ff; box-shadow: 0 5px 15px rgba(18, 22, 243, 0.4); }
-        footer { 
-             background: var(--footer-bg); padding: 30px; 
-             border-radius: 25px; text-align: center; margin-top: 20px;
-        }
-        @media (min-width: 768px) {
-            header h1 { font-size: 3.8em; }
-            .cards-container { grid-template-columns: repeat(3, 1fr); gap: 30px; }
-            body { padding: 40px; }
-        }
-        @keyframes shimmer { to { background-position: 300% center; } }
-    </style>
+  <!-- Favicons -->
+  <link rel="icon" href="logo.png" type="image/png" sizes="96x96" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="shortcut icon" type="image/png" href="logox.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaa/" />
+  <meta property="og:title" content="موقع حلبسة | 7LBSAA" />
+  <meta property="og:description" content="تمبلتات ميمز، مدرسين ثانوية عامة، وتحديات كرة القدم." />
+  <meta property="og:image" content="logoshare.png" />
+
+  <style>
+    :root{
+      --bg-grad-light: linear-gradient(135deg,#e9f0ff 0%,#d9e3ff 100%);
+      --bg-grad-dark: linear-gradient(135deg,#0d1021 0%,#070a17 100%);
+      --text-light:#1d2435;
+      --text-dark:#e9eefb;
+      --accent-light:#2f6bff;
+      --accent-dark:#ffd54d;
+
+      --glass1-light: rgba(255,255,255,.65);
+      --glass2-light: rgba(255,255,255,.45);
+      --glass1-dark: rgba(20,22,40,.55);
+      --glass2-dark: rgba(20,22,40,.35);
+
+      --blur: 18px;
+      --border-light: rgba(0,0,0,.08);
+      --border-dark: rgba(255,255,255,.18);
+
+      --toggle-w: 120px;
+      --toggle-h: 50px;
+      --knob: 40px;
+    }
+
+    body{
+      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin:0; min-height:100vh; overflow-x:hidden; position:relative;
+      background: var(--bg-grad-light);
+      color: var(--text-light);
+      padding:16px 16px 40px;
+      transition: background .5s ease, color .35s ease;
+    }
+    body.dark-mode{
+      background: var(--bg-grad-dark);
+      color: var(--text-dark);
+    }
+
+    /* خلفية الفيديو عادي بدون فلاتر */
+    .video-background{position:fixed; inset:0; z-index:-2; overflow:hidden}
+    .bg-video{
+      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      min-width:100%; min-height:100%; object-fit:cover; filter:none;
+    }
+
+    /* شعار أعلى اليمين "على الهوا" بلا صندوق */
+    .site-brand-float{
+      position:fixed; top:12px; right:12px; z-index:120;
+      width:100px; height:auto; object-fit:contain; border-radius:20px;
+      background: none; border:none; padding:0;
+      filter: drop-shadow(0 8px 22px rgba(0,0,0,.35));
+      pointer-events:none; /* صورة عرض فقط */
+      transition: transform .35s ease, filter .35s ease;
+    }
+    .site-brand-float:hover{ transform: translateY(-2px) }
+
+    /* محول الوضع (بدون صور) — UI نظيف */
+    .theme-switch-wrapper{position:fixed; top:14px; left:14px; z-index:120}
+    .theme-toggle{
+      position:relative; width:var(--toggle-w); height:var(--toggle-h);
+      border-radius:999px; border:1px solid var(--border-light);
+      background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.6));
+      overflow:hidden; cursor:pointer; outline:none;
+      box-shadow: 0 8px 24px rgba(0,0,0,.18);
+      transition: transform .35s ease, background .5s ease, border-color .35s ease;
+    }
+    body.dark-mode .theme-toggle{
+      border-color: var(--border-dark);
+      background: linear-gradient(180deg, rgba(30,32,56,.8), rgba(30,32,56,.6));
+      box-shadow: 0 10px 36px rgba(0,0,0,.35);
+    }
+    .theme-toggle:hover{ transform: translateY(-2px) }
+
+    /* المسار يتغير لونه وبه نجوم في الداكن وسحب في الفاتح */
+    .theme-toggle .track{
+      position:absolute; inset:0; border-radius:inherit;
+      transition: background .6s ease, filter .6s ease;
+      background:
+        radial-gradient(circle at 15% 70%, rgba(255,255,255,.6) 0 8%, transparent 9%),
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,.7) 0 10%, transparent 11%),
+        linear-gradient(90deg,#9cc8ff,#e6f0ff); /* سحب خفيفة */
+      filter: saturate(1.05);
+    }
+    body.dark-mode .theme-toggle .track{
+      background:
+        radial-gradient(circle at 25% 35%, rgba(255,255,255,.85) 0 2px, transparent 3px),
+        radial-gradient(circle at 60% 60%, rgba(255,255,255,.8) 0 1.6px, transparent 1.7px),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,.7) 0 1.8px, transparent 1.9px),
+        linear-gradient(90deg,#131a3a,#070d25); /* نجوم وليل */
+    }
+
+    /* المقبض */
+    .knob{
+      position:absolute; top:50%; left:6px; transform:translateY(-50%);
+      width:var(--knob); height:var(--knob); border-radius:50%;
+      background: #fff; border:1px solid var(--border-light);
+      box-shadow: 0 6px 18px rgba(0,0,0,.22), inset 0 2px 8px rgba(255,255,255,.5);
+      display:grid; place-items:center;
+      transition: left .5s cubic-bezier(.22,1,.36,1), background .4s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    body.dark-mode .knob{
+      left: calc(var(--toggle-w) - var(--knob) - 6px);
+      background: #e3e6ff; border-color: var(--border-dark);
+      box-shadow: 0 8px 22px rgba(0,0,0,.35), inset 0 2px 10px rgba(255,255,255,.35);
+    }
+
+    /* أيقونات CSS داخل المقبض */
+    .icon-sun, .icon-moon{ width:20px; height:20px; position:relative; transition: opacity .4s ease, transform .4s ease }
+    .icon-sun{
+      border-radius:50%; background: radial-gradient(circle,#ffd54d 0 60%, #ffb300 61% 100%);
+      box-shadow:
+        0 0 0 2px rgba(255,213,77,.65),
+        0 0 16px rgba(255,196,0,.55);
+    }
+    .icon-sun::before{
+      content:""; position:absolute; inset:-6px;
+      background:
+        radial-gradient(circle, rgba(255,213,77,.9) 0 2px, transparent 3px) 50% 0/4px 4px,
+        radial-gradient(circle, rgba(255,213,77,.9) 0 2px, transparent 3px) 0 50%/4px 4px,
+        radial-gradient(circle, rgba(255,213,77,.9) 0 2px, transparent 3px) 100% 50%/4px 4px,
+        radial-gradient(circle, rgba(255,213,77,.9) 0 2px, transparent 3px) 50% 100%/4px 4px;
+      background-repeat:no-repeat;
+    }
+    .icon-moon{
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 40% 40%, #dfe4ff 0 60%, transparent 61%),
+        radial-gradient(circle at 55% 55%, rgba(0,0,0,.18) 0 56%, transparent 57%);
+      box-shadow: 0 0 16px rgba(160,170,255,.45);
+    }
+
+    /* تبادل ظهور الأيقونات */
+    .icon-sun{ opacity:1 }
+    .icon-moon{ opacity:0; position:absolute }
+    body.dark-mode .icon-sun{ opacity:0; transform: scale(.85) }
+    body.dark-mode .icon-moon{ opacity:1; transform: scale(1) }
+
+    /* تخطيط الحاويات بأسلوب UI نظيف */
+    .container{max-width:1180px; margin:0 auto; position:relative; z-index:1}
+
+    header{
+      margin:110px auto 20px; padding:26px 18px; max-width:920px;
+      border-radius:22px;
+      border:1px solid var(--border-light);
+      background: linear-gradient(180deg, var(--glass1-light), var(--glass2-light));
+      backdrop-filter: blur(var(--blur));
+      box-shadow: 0 14px 48px rgba(0,0,0,.18);
+      text-align:center; color:#1d1d1d;
+      transition: background .5s ease, border-color .35s ease, color .35s ease, box-shadow .35s ease;
+    }
+    body.dark-mode header{
+      background: linear-gradient(180deg, var(--glass1-dark), var(--glass2-dark));
+      color: #fff; border-color: var(--border-dark);
+      box-shadow: 0 16px 56px rgba(0,0,0,.35);
+    }
+    header h1{
+      margin:0 0 10px; font-size:2.3em;
+      background: linear-gradient(45deg,#0b52ff,#00b4ff,#ffd54d);
+      background-size:300% auto; -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color: transparent; animation: shimmer 5s linear infinite;
+    }
+    .brand-sub{opacity:.9; margin-bottom:18px}
+
+    .contact-pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 18px; border-radius:999px; text-decoration:none;
+      color:#fff; font-weight:700;
+      background: linear-gradient(90deg, var(--accent-light), #4a8dff);
+      box-shadow: 0 10px 28px rgba(0,86,255,.35);
+      transition: transform .25s ease, box-shadow .35s ease;
+    }
+    .contact-pill:hover{ transform: translateY(-2px); box-shadow: 0 14px 34px rgba(0,86,255,.45) }
+    body.dark-mode .contact-pill{
+      background: linear-gradient(90deg,#ffb300,#ff6b00);
+      box-shadow: 0 12px 32px rgba(255,150,0,.35);
+    }
+
+    .cards-container{display:grid; grid-template-columns:1fr; gap:22px; margin:24px auto 46px; max-width:1120px}
+    @media (min-width: 900px){ .cards-container{grid-template-columns: repeat(3, 1fr)} }
+    .card{
+      border-radius:18px; overflow:hidden;
+      border:1px solid var(--border-light);
+      background: linear-gradient(180deg, var(--glass1-light), var(--glass2-light));
+      backdrop-filter: blur(calc(var(--blur) + 2px));
+      box-shadow: 0 12px 40px rgba(0,0,0,.16);
+      transition: transform .25s ease, box-shadow .35s ease, border-color .35s ease, background .5s ease;
+    }
+    body.dark-mode .card{
+      border-color: var(--border-dark);
+      background: linear-gradient(180deg, var(--glass1-dark), var(--glass2-dark));
+      box-shadow: 0 14px 46px rgba(0,0,0,.32);
+    }
+    .card:hover{ transform: translateY(-6px) }
+    .card-image{width:100%; height:210px; object-fit:cover}
+    .card-content{padding:18px; text-align:center}
+    .card-content h2{margin:0 0 8px; color: var(--accent-light)}
+    body.dark-mode .card-content h2{ color: var(--accent-dark) }
+    .card-content p{margin:0 0 12px; opacity:.9}
+    .card-button{
+      display:inline-block; padding:10px 22px; border-radius:999px; border:none;
+      color:#fff; font-weight:700; cursor:pointer; text-decoration:none;
+      background: linear-gradient(90deg,#2f81ff,#2555ff);
+      box-shadow: 0 8px 22px rgba(40,90,255,.35);
+      transition: transform .25s ease, box-shadow .35s ease;
+    }
+    .card-button:hover{ transform: translateY(-3px) }
+    body.dark-mode .card-button{ background: linear-gradient(90deg,#ff9f2f,#ff6a2f); box-shadow: 0 10px 26px rgba(255,130,50,.35) }
+
+    footer{
+      margin:0 auto; max-width:920px; text-align:center;
+      border-radius:18px; border:1px solid var(--border-light);
+      background: linear-gradient(180deg, var(--glass1-light), var(--glass2-light));
+      backdrop-filter: blur(var(--blur)); box-shadow: 0 12px 40px rgba(0,0,0,.16);
+      padding:22px; transition: background .5s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    body.dark-mode footer{
+      border-color: var(--border-dark);
+      background: linear-gradient(180deg, var(--glass1-dark), var(--glass2-dark));
+      box-shadow: 0 14px 46px rgba(0,0,0,.32);
+    }
+    footer .top{margin-bottom:10px; border-bottom:1px solid currentColor; opacity:.25}
+
+    @keyframes shimmer{to{background-position:300% center}}
+  </style>
 </head>
 <body>
-    <button class="theme-toggle" id="themeBtn" title="تبديل الوضع">🌙</button>
-    <canvas id="particles-canvas"></canvas>
 
-    <div class="container">
-        <header>
-            <h1>🌟 موقع حلبسة 🌟</h1>
-            <div class="brand-tagline">
-                المنصة العربية الأولى للتمبلتات والميمز وطلاب الثانوية العامة<br>
-                <strong>7LBSAA • 7LBSAA1</strong>
-            </div>
-            <a href="https://7lbsaa1.github.io/7lbsaa.contact-us/" class="contact-btn">تواصل معنا 📞</a>
+  <!-- شعار أعلى اليمين "على الهوا" (بدون مربع) -->
+  <img src="toplogo1.jpg" alt="شعار حلبسة" class="site-brand-float" />
 
-            <div class="search-container">
-                <div class="search-input-container">
-                    <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن تمبلت، مدرس، أو خلفية...">
-                </div>
-            </div>
-        </header>
+  <!-- محول الوضع بدون صور (CSS فقط) -->
+  <div class="theme-switch-wrapper">
+    <button id="themeToggle" class="theme-toggle" aria-label="تبديل الوضع">
+      <span class="track" aria-hidden="true"></span>
+      <span class="knob">
+        <span class="icon-sun" aria-hidden="true"></span>
+        <span class="icon-moon" aria-hidden="true"></span>
+      </span>
+    </button>
+  </div>
 
-        <div class="cards-container">
-            <div class="card" data-category="ميمز تمبلتات مضحكة">
-                <img src="images/logo3.jpg" loading="lazy" alt="تمبلتات ميمز" class="card-image">
-                <div class="card-content">
-                    <h2>التمبلتات والميمز</h2>
-                    <p>أكبر مكتبة تمبلتات ميمز مصرية حصرية بجودة عالية.</p>
-                    <a href="https://7lbsaa1.github.io/7lbsaa.memes/" class="card-button">دخول 😂</a>
-                </div>
-            </div>
+  <!-- خلفية الفيديو (طبيعي) -->
+  <div class="video-background">
+    <video class="bg-video" src="videos/koko2.mp4" muted loop autoplay playsinline></video>
+  </div>
 
-            <div class="card" data-category="تعليم مدرسين ثانوية عامة">
-                <img src="images/logo2.jpg" loading="lazy" alt="مدرسين الثانوية" class="card-image">
-                <div class="card-content">
-                    <h2>مدرسين الثانوية</h2>
-                    <p>دليلك الشامل لأفضل مدرسي الثانوية العامة في مصر.</p>
-                    <a href="https://7lbsaa1.github.io/7lbsaateachers/" class="card-button">دخول 🎓</a>
-                </div>
-            </div>
+  <!-- نافذة "قيد العمل" -->
+  <div class="modal-overlay" id="workingModal" style="display:none; position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.7); backdrop-filter: blur(10px); align-items:center; justify-content:center">
+    <div class="modal-content" style="max-width:420px; width:90%; text-align:center; border-radius:22px; padding:28px; border:1px solid var(--border-dark); background: linear-gradient(180deg, rgba(20,22,40,.55), rgba(20,22,40,.35)); backdrop-filter: blur(22px); box-shadow: 0 16px 56px rgba(0,0,0,.35);">
+      <img src="wait.jpg" alt="قيد العمل" style="width:160px; height:160px; object-fit:contain; margin-bottom:12px; animation: spin 1.8s linear infinite">
+      <h3 style="margin:0 0 6px; color:#ffd54d">⏳ قيد العمل</h3>
+      <p style="margin:0 0 14px;">هذا القسم لسه قيد التطوير.</p>
+      <button onclick="closeModal()" style="padding:10px 24px; border-radius:999px; border:none; background:linear-gradient(90deg,#ff6b6b,#ee5a6f); color:#fff; font-weight:700; cursor:pointer">حسناً</button>
+    </div>
+  </div>
 
-            <div class="card" data-category="خلفيات موبايل صور">
-                <img src="images/logo1.jpg" loading="lazy" alt="خلفيات موبايل" class="card-image">
-                <div class="card-content">
-                    <h2>خلفيات الموبايل</h2>
-                    <p>خلفيات مميزة وعالية الجودة بتصاميم حصرية لفريق حلبسة.</p>
-                    <a href="https://7lbsaa1.github.io/7lbsaa.wallpapers/" class="card-button">دخول 📱</a>
-                </div>
-            </div>
+  <div class="container">
+    <header>
+      <h1>موقع حلبسة</h1>
+      <div class="brand-sub">المنصة العربية الأولى للميمز والتمبلتات وطلاب الثانوية العامة وتحديات كرة القدم</div>
+
+      <a class="contact-pill" href="https://7lbsaa1.github.io/7lbsaa.contact-us/" title="تواصل معنا">تواصل معنا</a>
+    </header>
+
+    <div class="cards-container">
+      <!-- 1) تحدي كرة القدم -->
+      <div class="card" data-category="تحدي كرة قدم معلومات">
+        <img src="football.7lbsaa.jpg" class="card-image" alt="تحدي معلومات كرة القدم" loading="lazy" />
+        <div class="card-content">
+          <h2>تحدي معلومات كرة القدم</h2>
+          <p>اختبر معلوماتك الكروية وتحدى أصحابك!</p>
+          <button class="card-button" onclick="showWorkingModal()">دخول ⚽</button>
         </div>
+      </div>
 
-        <footer>
-            <div style="text-align: right; margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 15px;">
-                <h3 style="color: var(--accent-color); margin-bottom: 8px;">عن موقع حلبسة (7LBSAA):</h3>
-                <p style="font-size: 0.95em; line-height: 1.6;">المنصة الأكبر التي تجمع بين الترفيه والتعليم لخدمة الشباب العربي.</p>
-            </div>
-            <p><strong>جميع الحقوق محفوظة © موقع حلبسة الرسمي • 7LBSAA</strong></p>
-        </footer>
+      <!-- 2) مدرسين الثانوية -->
+      <div class="card" data-category="تعليم مدرسين ثانوية عامة">
+        <img src="images/logo2.jpg" class="card-image" alt="مدرسين الثانوية" loading="lazy" />
+        <div class="card-content">
+          <h2>مدرسين الثانوية</h2>
+          <p>دليل شامل لأفضل مدرسي الثانوية العامة في مصر.</p>
+          <a href="https://7lbsaa1.github.io/7lbsaateachers/" class="card-button">دخول 🎓</a>
+        </div>
+      </div>
+
+      <!-- 3) التمبلتات والميمز -->
+      <div class="card" data-category="ميمز تمبلتات مضحكة">
+        <img src="images/logo3.jpg" class="card-image" alt="التمبلتات والميمز" loading="lazy" />
+        <div class="card-content">
+          <h2>التمبلتات والميمز</h2>
+          <p>أكبر مكتبة تمبلتات ميمز مصرية بجودة عالية.</p>
+          <a href="https://7lbsaa1.github.io/7lbsaa.memes/" class="card-button">دخول 😂</a>
+        </div>
+      </div>
     </div>
 
-    <script>
-        const themeBtn = document.getElementById('themeBtn');
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            themeBtn.innerText = isDark ? '☀️' : '🌙';
-        });
+    <footer>
+      <div class="top"></div>
+      <p><strong>جميع الحقوق محفوظة © موقع حلبسة الرسمي • 7LBSAA</strong></p>
+    </footer>
+  </div>
 
-        const searchInput = document.getElementById('searchInput');
-        const cards = document.querySelectorAll('.card');
+  <style>
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  </style>
 
-        searchInput.addEventListener('input', (e) => {
-            const val = e.target.value.toLowerCase();
-            cards.forEach(card => {
-                const category = card.dataset.category.toLowerCase();
-                if(category.includes(val)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
+  <script>
+    // تحميل السمة المحفوظة
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme === 'dark'){ document.body.classList.add('dark-mode'); }
 
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
+    // تبديل السمة
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
 
-        let particles = [];
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.speedY = Math.random() * 0.4 + 0.1;
-                this.size = Math.random() * 1.5 + 0.5;
-            }
-            update() {
-                this.y += this.speedY;
-                if (this.y > canvas.height) this.y = -10;
-            }
-            draw() {
-                ctx.fillStyle = 'rgba(255,255,255,0.4)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-        for(let i=0; i<60; i++) particles.push(new Particle());
-        function animate() {
-            ctx.clearRect(0,0,canvas.width, canvas.height);
-            particles.forEach(p => { p.update(); p.draw(); });
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
+    // Modal قيد العمل
+    function showWorkingModal(){ document.getElementById('workingModal').style.display = 'flex'; }
+    function closeModal(){ document.getElementById('workingModal').style.display = 'none'; }
+    document.getElementById('workingModal').addEventListener('click', (e)=>{ if(e.target.id==='workingModal') closeModal(); });
+  </script>
 </body>
 </html>
-
